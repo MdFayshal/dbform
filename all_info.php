@@ -1,6 +1,7 @@
 <?php 
 include('header.php');
 require_once('database.php');
+
 $info = "SELECT * FROM information";
 $result = mysqli_query($connection,$info); 
 ?>
@@ -34,7 +35,8 @@ $result = mysqli_query($connection,$info);
             <td class="text-info "><?php echo $lop['last_name'];?></td>
             <td class="text-info "><?php echo $lop['email'];?></td>
             <td class="text-info ">
-            <a href="edit.php?id=<?php echo $lop['id'];?>&fn=<?php echo $lop['first_name'];?>&ln=<?php echo $lop['last_name'];?>&em=<?php echo $lop['email'];?>" class="btn btn-sm btn-warning">Edit</a> ||
+           <!-- <a href="edit.php?id= <?phpecho $lop['id'];?>&fn=<?php echo $lop['first_name'];?>&ln=<?php echo $lop['last_name'];?>&em=<?php echo $lop['email'];?>" class="btn btn-sm btn-warning">Edit</a> ||-->
+            <a href="editinfo.php?id=<?php echo $lop['id'];?>" class="btn btn-sm btn-warning">Edit</a> ||
             <a href="delete.php?id=<?php echo $lop['id']?>" class="btn btn-sm btn-danger text-light">Delete</a> ||
             <a href="show.php?id=<?php echo $lop['id'];?>" class="btn btn-sm btn-success">Show</a>
             </td>
